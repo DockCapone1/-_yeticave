@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title><?= p?></title>
+    <title><?=p?></title>
     <link href="../css/normalize.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
 </head>
@@ -21,24 +20,17 @@
                 <input class="main-header__search-btn" type="submit" name="find" value="Найти">
             </form>
             <a class="main-header__add-lot button" href="pages/add-lot.html">Добавить лот</a>
-
             <nav class="user-menu">
-
-                <?php $is_auth = rand(0, 1);
+                <? $is_auth =rand(0, 1);
                 if ($is_auth == true): ?>
-
                     <div class="user-menu__image">
-
                         <img src="<?=d?>" width="40" height="40" alt="Пользователь">
                     </div>
                     <div class="user-menu__logged">
                         <p><?= b?></p>
+                <?php
+                elseif($is_auth == false): ?>
                     </div>
-
-
-
-                <?php elseif($is_auth == false): ?>
-
                     <ul class="user-menu__list">
                         <li class="user-menu__item">
                             <a href="#">Регистрация</a>
@@ -47,18 +39,14 @@
                             <a href="#">Вход</a>
                         </li>
                     </ul>
-
                 <?php endif; ?>
-
                 <!— здесь должен быть PHP код для показа меню и данных пользователя —>
-
             </nav>
         </div>
     </header>
     <main class="container">
         <?=p?>
     </main>
-
     <footer class="main-footer">
         <nav class="nav">
             <ul class="nav__list container">
@@ -112,7 +100,6 @@
             </div>
         </div>
     </footer>
-
     <script src="flatpickr.js"></script>
     <script src="script.js"></script>
 </body>

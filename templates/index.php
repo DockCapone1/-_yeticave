@@ -34,6 +34,7 @@
                         </div>
                         <div class="lot__timer timer">
                             12:23
+                            <?=lot_time_remaining?>
                         </div>
                     </div>
                 </div>
